@@ -1,13 +1,14 @@
 package Utils;
 
 import com.fasterxml.jackson.core.*;
+import com.fasterxml.jackson.core.type.*;
 import com.fasterxml.jackson.databind.*;
 import vehicle.*;
 
 import java.io.*;
+import java.util.*;
 
 public class JsonUtils {
-    public String jsonString;
     public String data;
     ObjectMapper objectMapper = new ObjectMapper();
 
@@ -21,8 +22,7 @@ public class JsonUtils {
         // on écrit l'objet JSON dans le fichier en mode append
         objectMapper.writeValue(outputFile, object);
 
-
-        // fermeture du FileWriter
+        // fermeture d2u FileWriter
         // fileWriter.close();
 
         return outputFile;
@@ -48,5 +48,13 @@ public class JsonUtils {
     public String getDataFromJSONode(String jsonString, String data) throws JsonProcessingException {
         JsonNode jsoNode = objectMapper.readTree(jsonString);
         return jsoNode.get(data).asText();
+    }
+
+    public List<Car> parseJsonArrayTojavaObjectList(String jsonCarArray) throws JsonProcessingException {
+        return objectMapper.readValue(jsonCarArray, new TypeReference<>() {});
+    }
+
+    public Map<String, Object> creatingJavaMapFromJsonString(String jsonString) throws JsonProcessingException {
+        return objectMapper.readValue(jsonString, new TypeReference<>() {});
     }
 }
