@@ -1,4 +1,4 @@
-package JsonParsing;
+package introjacksonobjectmapper.config;
 
 import com.fasterxml.jackson.databind.*;
 import org.springframework.context.annotation.*;

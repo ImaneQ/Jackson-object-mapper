@@ -1,4 +1,4 @@
-package vehicle;
+package introjacksonobjectmapper.models;
 
 public class Car {
 
@@ -6,7 +6,6 @@ public class Car {
     private String type;
 
     public Car(){
-
     }
     public Car(String color, String type) {
         this.color = color;

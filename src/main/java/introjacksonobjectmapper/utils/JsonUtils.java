@@ -1,9 +1,9 @@
-package Utils;
+package introjacksonobjectmapper.utils;
 
 import com.fasterxml.jackson.core.*;
 import com.fasterxml.jackson.core.type.*;
 import com.fasterxml.jackson.databind.*;
-import vehicle.*;
+import introjacksonobjectmapper.models.*;
 
 import java.io.*;
 import java.util.*;

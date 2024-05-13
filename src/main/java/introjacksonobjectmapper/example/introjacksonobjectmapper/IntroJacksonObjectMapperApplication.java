@@ -1,10 +1,10 @@
-package com.example.introjacksonobjectmapper;
+package introjacksonobjectmapper.example.introjacksonobjectmapper;
 
-import Utils.*;
 import com.fasterxml.jackson.databind.*;
+import introjacksonobjectmapper.models.*;
+import introjacksonobjectmapper.utils.*;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
-import vehicle.*;
 
 import java.io.*;
 
